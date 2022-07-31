@@ -1,0 +1,288 @@
+
+<!--mixin item(title, descr)-->
+<!--  .item-->
+<!--    h2.item-title= title-->
+<!--    p.item-descr= descr--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Description for project">
+    <title>Главная</title>
+  <link href="/assets/css/vendors.32f3db80afc34d39b40a.css" rel="stylesheet"><link href="/assets/css/app.32f3db80afc34d39b40a.css" rel="stylesheet"></head>
+  <body class="body">
+    <div id="app">
+<header class="header-main">
+  <div class="header-main__wrapper">
+    <div class="header-main__block">
+      <div class="contacts header-main__inner">
+        <button class="button-image contacts__phone js-modal-trigger" data-trigger="callback" title="Заказать звонок"><img class="contacts__img" src="../../assets/img/icons/phone.svg" alt="phone"><span class="contacts__text">заказать звонок</span></button>
+        <button class="button-image contacts__mail" title="welcome@logist.cloud"><img class="contacts__img" src="../../assets/img/icons/mail.svg" alt="mail"><span class="contacts__text contacts__text--md">welcome@logist.cloud</span></button>
+      </div>
+    </div>
+    <div class="header-main__block">
+      <div class="contacts header-main__inner">
+        <button class="button-image contacts__registration js-modal-trigger" data-trigger="registration" title="Регистрация"><img class="contacts__img" src="../../assets/img/icons/reg.svg" alt="register"><span class="contacts__text" style="display: inline-block">регистрация</span></button>
+        <button class="button-image contacts__lk js-modal-trigger" title="Личный кабинет" data-trigger="auth"><img class="contacts__img" src="../../assets/img/icons/user.svg" alt="user"><span class="contacts__text">личный кабинет</span></button>
+      </div>
+    </div>
+  </div>
+</header>
+      <header class="header-w js-header js-visibility animate__animated" style="display: none">
+        <div class="header-w__wrapper">
+          <div class="header-w__block header-w--clearfix">
+            <div class="logotype header__logotype"><a class="logotype__link" href="#" title="Облачная логистика">
+                <div class="logotype__img-wrapper"><img class="logotype__image" src="../../assets/img/icons/logotype.svg" alt="logotype"></div>
+                <div class="logotype__text">облачная логистика</div></a></div>
+          </div>
+          <div class="header-w__block">
+            <div class="contacts header-w__inner">
+              <button class="button-image contacts__phone js-modal-trigger" data-trigger="callback" title="Заказать звонок"><img class="contacts__img" src="../../assets/img/icons/phone.svg" alt="phone"><span class="contacts__text">заказать звонок</span></button>
+              <button class="button-image contacts__mail" title="welcome@logist.cloud"><img class="contacts__img" src="../../assets/img/icons/mail.svg" alt="mail"><span class="contacts__text contacts__text--md">welcome@logist.cloud</span></button>
+            </div>
+          </div>
+          <div class="header-w__block">
+            <div class="contacts header-w__inner">
+              <button class="button-image contacts__registration js-modal-trigger" data-trigger="registration" title="Регистрация"><img class="contacts__img" src="../../assets/img/icons/reg.svg" alt="register"><span class="contacts__text" style="display: inline-block">регистрация</span></button>
+              <button class="button-image contacts__lk js-modal-trigger" title="Личный кабинет" data-trigger="auth"><img class="contacts__img" src="../../assets/img/icons/user.svg" alt="user"><span class="contacts__text">личный кабинет</span></button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main">
+        <div class="page-block">
+          <div class="introduce js-logo" style="background-image: url('../../assets/img/icons/tube.svg')">
+            <div class="introduce__img-wrapper"><img class="introduce__image" src="../../assets/img/icons/page-logo.svg" width="100%"></div>
+          </div>
+          <div class="title">
+            <h1 class="title__page-title">облачная логистика</h1>
+            <p class="title__page-desc">система для автоматизации вашей логистики</p>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="page-block">
+            <div class="router">
+              <div class="router__wrapper">
+                <div class="router__link-wrapper"><a class="router__link router__link--zk" title="Для заказчиков" href="#" style="background-image: url('../../assets/img/photos/dark-cloud.png')"><span class="router__link-content router__link-content--zk">Грузовладельцам</span></a></div>
+                <div class="router__link-wrapper"><a class="router__link router__link--tk" title="Для транспортных компаний" href="#" style="background-image: url('../../assets/img/photos/light-cloud.png')"><span class="router__link-content router__link-content--tk">Перевозчикам</span></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="page-block">
+            <div class="transportation">
+              <div class="transportation__wrapper">
+                <h2 class="block-title block-title--mb">Актуальные перевозки прямо сейчас</h2>
+                <div class="transportation__wrapper-inner">
+                  <ul class="transportation__list" id="masonry">
+                    <li class="transportation__item item-width">
+                      <div class="transportation__address"><span class="transportation__destination">г Нижний Новгород</span><span class="transportation__destination">г Долгопрудный</span></div>
+                      <div class="transportation__datetime"><span class="transportation__datetime-item">16:05</span><span class="transportation__datetime-item">27.07.2022</span></div>
+                      <div class="transportation__info">
+                        <div class="transportation__info-item transportation__info-item--white"> 10.924 т</div>
+                        <div class="transportation__info-item transportation__info-item--grow">
+                          <div class="transportation__info-truck">Рефрижератор</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="transportation__item item-width">
+                      <div class="transportation__address"><span class="transportation__destination">603950 г. Нижний Новгород ш. Жиркомбината, 11</span><span class="transportation__destination">г Великий Новгород</span></div>
+                      <div class="transportation__datetime"><span class="transportation__datetime-item">16:04</span><span class="transportation__datetime-item">27.07.2022</span></div>
+                      <div class="transportation__info">
+                        <div class="transportation__info-item transportation__info-item--white"> 20 т</div>
+                        <div class="transportation__info-item transportation__info-item--grow">
+                          <div class="transportation__info-truck">тентованный, контейнер, фургон, цельнометалл.</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="transportation__item item-width">
+                      <div class="transportation__address"><span class="transportation__destination">г Нижний Новгород</span><span class="transportation__destination">г Долгопрудный</span></div>
+                      <div class="transportation__datetime"><span class="transportation__datetime-item">16:03</span><span class="transportation__datetime-item">27.07.2022</span></div>
+                      <div class="transportation__info">
+                        <div class="transportation__info-item transportation__info-item--white"> 10.924 т</div>
+                        <div class="transportation__info-item transportation__info-item--grow">
+                          <div class="transportation__info-truck">Рефрижератор</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="transportation__item item-width">
+                      <div class="transportation__address"><span class="transportation__destination">603950 г. Нижний Новгород ш. Жиркомбината, 11</span><span class="transportation__destination">г Великий Новгород</span></div>
+                      <div class="transportation__datetime"><span class="transportation__datetime-item">16:02</span><span class="transportation__datetime-item">27.07.2022</span></div>
+                      <div class="transportation__info">
+                        <div class="transportation__info-item transportation__info-item--white"> 20 т</div>
+                        <div class="transportation__info-item transportation__info-item--grow">
+                          <div class="transportation__info-truck">тентованный, контейнер, фургон, цельнометалл.</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="transportation__item item-width">
+                      <div class="transportation__address"><span class="transportation__destination">г Нижний Новгород</span><span class="transportation__destination">г Долгопрудный</span></div>
+                      <div class="transportation__datetime"><span class="transportation__datetime-item">16:01</span><span class="transportation__datetime-item">27.07.2022</span></div>
+                      <div class="transportation__info">
+                        <div class="transportation__info-item transportation__info-item--white"> 10.924 т</div>
+                        <div class="transportation__info-item transportation__info-item--grow">
+                          <div class="transportation__info-truck">Рефрижератор</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="transportation__item item-width">
+                      <div class="transportation__address"><span class="transportation__destination">603950 г. Нижний Новгород ш. Жиркомбината, 11</span><span class="transportation__destination">г Великий Новгород</span></div>
+                      <div class="transportation__datetime"><span class="transportation__datetime-item">15:45</span><span class="transportation__datetime-item">27.07.2022</span></div>
+                      <div class="transportation__info">
+                        <div class="transportation__info-item transportation__info-item--white"> 20 т</div>
+                        <div class="transportation__info-item transportation__info-item--grow">
+                          <div class="transportation__info-truck">тентованный, контейнер, фургон, цельнометалл.</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="transportation__item item-width">
+                      <div class="transportation__address"><span class="transportation__destination">г Нижний Новгород</span><span class="transportation__destination">г Долгопрудный</span></div>
+                      <div class="transportation__datetime"><span class="transportation__datetime-item">15:40</span><span class="transportation__datetime-item">27.07.2022</span></div>
+                      <div class="transportation__info">
+                        <div class="transportation__info-item transportation__info-item--white"> 10.924 т</div>
+                        <div class="transportation__info-item transportation__info-item--grow">
+                          <div class="transportation__info-truck">Рефрижератор</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="transportation__item item-width">
+                      <div class="transportation__address"><span class="transportation__destination">603950 г. Нижний Новгород ш. Жиркомбината, 11</span><span class="transportation__destination">г Великий Новгород</span></div>
+                      <div class="transportation__datetime"><span class="transportation__datetime-item">15:33</span><span class="transportation__datetime-item">27.07.2022</span></div>
+                      <div class="transportation__info">
+                        <div class="transportation__info-item transportation__info-item--white"> 20 т</div>
+                        <div class="transportation__info-item transportation__info-item--grow">
+                          <div class="transportation__info-truck">тентованный, контейнер, фургон, цельнометалл.</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="transportation__item item-width">
+                      <div class="transportation__address"><span class="transportation__destination">603950 г. Нижний Новгород ш. Жиркомбината, 11</span><span class="transportation__destination">г Великий Новгород</span></div>
+                      <div class="transportation__datetime"><span class="transportation__datetime-item">15:30</span><span class="transportation__datetime-item">27.07.2022</span></div>
+                      <div class="transportation__info">
+                        <div class="transportation__info-item transportation__info-item--white"> 20 т</div>
+                        <div class="transportation__info-item transportation__info-item--grow">
+                          <div class="transportation__info-truck">тентованный, контейнер, фургон, цельнометалл.</div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="transportation__button-wrapper transportation__register">
+                  <button class="js-modal-trigger button" data-trigger="registration">Зарегистрироваться бесплатно за 1 минуту</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-block">
+            <div class="about">
+              <div class="about__wrapper">
+                <h2 class="block-title block-title--mb">Контакты</h2>
+                <div class="about__content">
+                  <div class="about__inner-content">
+                    <h3 class="block-sub_title block-sub_title--mb">Свяжитесь с нами</h3>
+                    <div class="about__information"><a class="about__phone" href="tel: +7 495 664-47-00"><span>+7 495 &nbsp;</span>664-47-00</a><a class="about__mail" href="mailto: welcome@logist.cloud">welcome@logist.cloud</a></div>
+                  </div>
+                  <div class="about__inner-content">
+                    <h3 class="block-sub_title block-sub_title--mb">Приложение</h3>
+                    <div class="about__information">
+                      <ul class="about__information-inner">
+                        <li class="about__list-item"><a class="about__link" href="#"><img src="../../assets/img/icons/google.png" width="100%"></a></li>
+                        <li class="about__list-item"><a class="about__link about__link--pos" href="#"><img src="../../assets/img/icons/apple.png" height="100%"></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="about__inner-content">
+                    <h3 class="block-sub_title block-sub_title--mb">Партнёры</h3>
+                    <div class="about__information">
+                      <ul class="about__information-inner">
+                        <li class="about__list-item"><a class="about__link about__link--partner" href="#"><img src="../../assets/img/icons/rts.png" height="100%"></a></li>
+                        <li class="about__list-item"><a class="about__link about__link--partner" href="#"><img src="../../assets/img/icons/b2b.png" height="100%"></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<footer class="footer">
+  <div class="footer__wrapper">
+    <ul class="footer__group footer__menu">
+      <li class="footer__item"><a class="footer__link" href="#">конфиденциальность</a></li>
+      <li class="footer__item"><a class="footer__link" href="#">безопасность</a></li>
+      <li class="footer__item"><a class="footer__link" href="#">системные требования</a></li>
+    </ul>
+    <div class="footer__group">
+      <div class="copyright">&#169; Облачная логистика, 2016—2021</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <div class="layout">
+      <div class="layout__background layout__background--image" style="background-image: url('../../assets/img/main-background-white.png')"></div>
+      <video class="layout__background layout__background--video js-bg" width="100%" height="100%" src="../../assets/video/main-background-white.mp4" poster="../../assets/img/main-background-white.png" muted loop autoplay></video>
+    </div>
+    <div class="modal" data-target="registration" style="display: none">
+      <div class="modal__window js-modal-window" style="background-image: url(&quot;../../assets/img/photos/light-modal-clouds.png&quot;)">
+        <button class="modal__close" data-close="registration" title="Закрыть"></button>
+        <div class="modal__header">
+          <h3 class="modal__title">Регистрация</h3>
+        </div>
+        <div class="modal__content">
+          <form class="user-form modal__form" id="form-register" action="#" method="POST" data-url="register">
+            <div class="user-form__section">
+              <input class="user-form__input" type="tel" placeholder="Ваш телефон" name="phoneNumber">
+            </div>
+            <div class="user-form__section">
+              <input class="user-form__submit" type="submit" value="Зарегистрироваться">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-target="auth" style="display:none">
+      <div class="modal__window js-modal-window" style="background-image: url(&quot;../../assets/img/photos/light-modal-clouds.png&quot;)">
+        <button class="modal__close" data-close="auth" title="Закрыть"></button>
+        <div class="modal__header">
+          <h3 class="modal__title">Личный кабинет</h3>
+        </div>
+        <div class="modal__content">
+          <form class="user-form modal__form" id="form-auth" action="#" method="POST" data-url="auth">
+            <div class="user-form__section">
+              <input class="user-form__input" type="text" placeholder="Логин" name="username">
+            </div>
+            <div class="user-form__section">
+              <input class="user-form__input" type="password" placeholder="Пароль" name="user_password">
+            </div>
+            <div class="user-form__section">
+              <input class="user-form__submit" type="submit" value="Войти">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-target="callback" style="display:none">
+      <div class="modal__window js-modal-window" style="background-image: url(&quot;../../assets/img/photos/light-modal-clouds.png&quot;)">
+        <button class="modal__close" data-close="callback" title="Закрыть"></button>
+        <div class="modal__header">
+          <h3 class="modal__title">Заказать звонок</h3>
+        </div>
+        <div class="modal__content">
+          <form class="user-form modal__form" id="form-callback" action="#" method="POST" data-url="callback">
+            <div class="user-form__section">
+              <input class="user-form__input" type="text" placeholder="Ваше имя" name="firstName">
+            </div>
+            <div class="user-form__section">
+              <input class="user-form__input" type="tel" placeholder="Телефон" name="phone_number">
+            </div>
+            <div class="user-form__section">
+              <input class="user-form__submit" type="submit" value="Войти">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="/assets/js/vendors.32f3db80afc34d39b40a.js"></script><script type="text/javascript" src="/assets/js/app.32f3db80afc34d39b40a.js"></script></body>
+</html>
