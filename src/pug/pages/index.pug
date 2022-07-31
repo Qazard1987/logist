@@ -1,0 +1,15 @@
+extends ../layout/base
+
+block variables
+    - var title = 'Список страниц';
+    - var description = 'Description for project';
+    - var pageClass = 'body';
+
+block content
+    .container
+        h1(style="font-size: 25px; text-align: center; margin:30px 0 30px 0") Список страниц
+        ul
+            each name,key in {"main-page.html":"Главная","tk.html":"Для транспортных компаний"}
+                li.breadcrumbs__item(style="margin-bottom: 10px")
+                    a.breadcrumbs__link.breadcrumbs__link_white(href=key style="font-size:18px")=name
+

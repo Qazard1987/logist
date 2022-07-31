@@ -1,0 +1,69 @@
+include ../utils/mixins
+block variables
+
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=0")
+        meta(name="format-detection" content="telephone=no")
+        meta(name="description", content=description)
+        title #{title}
+        block head
+
+    body(class=pageClass)
+        #app
+            block header
+                include ../includes/modules/header-main
+                header.header-w.js-header.js-visibility.animate__animated(style="display: none")
+                    .header-w__wrapper
+                        .header-w__block.header-w--clearfix
+                            .logotype.header__logotype
+                                a(class="logotype__link" href="#" title="Облачная логистика")
+                                    .logotype__img-wrapper
+                                        img.logotype__image(src="../../assets/img/icons/logotype.svg" alt="logotype")
+                                    .logotype__text облачная логистика
+
+                        .header-w__block
+                            .contacts.header-w__inner
+                                button(class="button-image contacts__phone js-modal-trigger" data-trigger="callback" title="Заказать звонок")
+                                    img.contacts__img(src="../../assets/img/icons/phone.svg" alt="phone")
+                                    span.contacts__text заказать звонок
+
+                                button(class="button-image contacts__mail" title="welcome@logist.cloud")
+                                    img.contacts__img(src="../../assets/img/icons/mail.svg" alt="mail")
+                                    span.contacts__text.contacts__text--md
+                                        | welcome@logist.cloud
+                        .header-w__block
+                            .contacts.header-w__inner
+                                button(class="button-image contacts__registration js-modal-trigger" data-trigger="registration" title="Регистрация")
+                                    img.contacts__img(src="../../assets/img/icons/reg.svg" alt="register")
+                                    span.contacts__text(style="display: inline-block") регистрация
+                                button(class="button-image contacts__lk js-modal-trigger" title="Личный кабинет" data-trigger="auth")
+                                    img.contacts__img(src="../../assets/img/icons/user.svg" alt="user")
+                                    span.contacts__text личный кабинет
+
+            block content
+
+            block footer
+                include ../includes/modules/footer
+
+        block layout
+            .layout
+               div(
+                   class="layout__background layout__background--image"
+                   style="background-image: url('../../assets/img/main-background-white.png')"
+               )
+               video(
+                   class="layout__background layout__background--video js-bg"
+                   width='100%' height='100%'
+                   src='../../assets/video/main-background-white.mp4'
+                   poster='../../assets/img/main-background-white.png'
+                   muted loop
+                   autoplay
+                   )
+
+        block modals
+
+        block script

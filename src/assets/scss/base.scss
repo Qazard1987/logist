@@ -1,0 +1,65 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+
+html {
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+}
+
+.body {
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+
+  font-family: $regularFont;
+  font-size: $mainFontSize;
+  font-style: normal;
+  font-weight: $mainFontWeight;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#app {
+  min-width: $bodyMinWidth;
+  min-height: 100vh;
+
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  .header,
+  .footer {
+    flex-shrink: 0;
+  }
+
+  .main {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+  }
+}

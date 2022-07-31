@@ -1,0 +1,26 @@
+// Font
+$lightFont: Roboto-300, Roboto, sans-serif;
+$regularFont: Roboto-400, Roboto, sans-serif;
+$mediumFont: Roboto-500, Roboto, sans-serif;
+
+// Default font styles
+$mainFontColor: #000000;
+$secondFontColor: rgba(0, 0, 0, 0.5);
+$mainFontSize: 10px;
+$mainFontWeight: 400;
+$mainLineHeight: 105%;
+
+//Body width
+$bodyMinWidth: 320px;
+//$bodyMaxWidth: 1440px;
+
+// Colors
+$activator: #FFC107;
+$errorColor: #ff5757;
+
+// Media
+$mobileLG: print, (min-width: 576px);
+$tablet: print, (min-width: 768px);
+$tabletH: print, (min-width: 992px);
+$desktop: print, (min-width: 1200px);
+$desktopLG: print, (min-width: 1500px);

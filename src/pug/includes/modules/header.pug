@@ -1,0 +1,27 @@
+header.header-w.js-header
+   .header-w__wrapper
+       .header-w__block.header-w--clearfix
+          .logotype.header__logotype
+             a(class="logotype__link" href="#" title="Облачная логистика")
+                .logotype__img-wrapper
+                    img.logotype__image(src="../../assets/img/icons/logotype.svg" alt="logotype")
+                .logotype__text облачная логистика
+
+       .header-w__block
+           .contacts.header-w__inner
+               button(class="button-image contacts__phone js-modal-trigger" data-trigger="callback" title="Заказать звонок")
+                  img.contacts__img(src="../../assets/img/icons/phone.svg" alt="phone")
+                  span.contacts__text заказать звонок
+
+               button(class="button-image contacts__mail" title="welcome@logist.cloud")
+                   img.contacts__img(src="../../assets/img/icons/mail.svg" alt="mail")
+                   span.contacts__text.contacts__text--md
+                                     |welcome@logist.cloud
+       .header-w__block
+           .contacts.header-w__inner
+               button(class="button-image contacts__registration js-modal-trigger" data-trigger="registration" title="Регистрация")
+                   img.contacts__img(src="../../assets/img/icons/reg.svg" alt="register")
+                   span.contacts__text(style="display: inline-block") регистрация
+               button(class="button-image contacts__lk js-modal-trigger" title="Личный кабинет" data-trigger="auth")
+                   img.contacts__img(src="../../assets/img/icons/user.svg" alt="user")
+                   span.contacts__text личный кабинет

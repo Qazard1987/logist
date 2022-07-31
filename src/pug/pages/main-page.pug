@@ -1,0 +1,212 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Главная';
+    - var description = 'Description for project';
+    - var pageClass = 'body';
+
+block content
+    div.main
+        .page-block
+            .introduce.js-logo(style="background-image: url('../../assets/img/icons/tube.svg')")
+                .introduce__img-wrapper
+                    img(src="../../assets/img/icons/page-logo.svg" class="introduce__image" width='100%')
+            .title
+                h1.title__page-title облачная логистика
+                p.title__page-desc система для автоматизации вашей логистики
+        .wrapper
+            .page-block
+                .router
+                    .router__wrapper
+                        .router__link-wrapper
+                            a(
+                                class="router__link router__link--zk" title="Для заказчиков" href="#"
+                                style="background-image: url('../../assets/img/photos/dark-cloud.png')")
+                                span.router__link-content.router__link-content--zk Грузовладельцам
+                        .router__link-wrapper
+                            a(
+                                class="router__link router__link--tk" title="Для транспортных компаний" href="#"
+                                style="background-image: url('../../assets/img/photos/light-cloud.png')")
+                                span.router__link-content.router__link-content--tk Перевозчикам
+            .page-block
+                .transportation
+                    .transportation__wrapper
+                        h2.block-title.block-title--mb Актуальные перевозки прямо сейчас
+                        .transportation__wrapper-inner
+                            ul#masonry.transportation__list
+                                li.transportation__item.item-width
+                                    .transportation__address
+                                        span.transportation__destination г Нижний Новгород
+                                        span.transportation__destination г Долгопрудный
+                                    .transportation__datetime
+                                        span.transportation__datetime-item 16:05
+                                        span.transportation__datetime-item 27.07.2022
+                                    .transportation__info
+                                        .transportation__info-item.transportation__info-item--white  10.924 т
+                                        .transportation__info-item.transportation__info-item--grow
+                                            .transportation__info-truck Рефрижератор
+                                li.transportation__item.item-width
+                                    .transportation__address
+                                        span.transportation__destination 603950 г. Нижний Новгород ш. Жиркомбината, 11
+                                        span.transportation__destination г Великий Новгород
+                                    .transportation__datetime
+                                        span.transportation__datetime-item 16:04
+                                        span.transportation__datetime-item 27.07.2022
+                                    .transportation__info
+                                        .transportation__info-item.transportation__info-item--white  20 т
+                                        .transportation__info-item.transportation__info-item--grow
+                                            .transportation__info-truck тентованный, контейнер, фургон, цельнометалл.
+                                li.transportation__item.item-width
+                                    .transportation__address
+                                        span.transportation__destination г Нижний Новгород
+                                        span.transportation__destination г Долгопрудный
+                                    .transportation__datetime
+                                        span.transportation__datetime-item 16:03
+                                        span.transportation__datetime-item 27.07.2022
+                                    .transportation__info
+                                        .transportation__info-item.transportation__info-item--white  10.924 т
+                                        .transportation__info-item.transportation__info-item--grow
+                                            .transportation__info-truck Рефрижератор
+                                li.transportation__item.item-width
+                                    .transportation__address
+                                        span.transportation__destination 603950 г. Нижний Новгород ш. Жиркомбината, 11
+                                        span.transportation__destination г Великий Новгород
+                                    .transportation__datetime
+                                        span.transportation__datetime-item 16:02
+                                        span.transportation__datetime-item 27.07.2022
+                                    .transportation__info
+                                        .transportation__info-item.transportation__info-item--white  20 т
+                                        .transportation__info-item.transportation__info-item--grow
+                                            .transportation__info-truck тентованный, контейнер, фургон, цельнометалл.
+                                li.transportation__item.item-width
+                                    .transportation__address
+                                        span.transportation__destination г Нижний Новгород
+                                        span.transportation__destination г Долгопрудный
+                                    .transportation__datetime
+                                        span.transportation__datetime-item 16:01
+                                        span.transportation__datetime-item 27.07.2022
+                                    .transportation__info
+                                        .transportation__info-item.transportation__info-item--white  10.924 т
+                                        .transportation__info-item.transportation__info-item--grow
+                                            .transportation__info-truck Рефрижератор
+                                li.transportation__item.item-width
+                                    .transportation__address
+                                        span.transportation__destination 603950 г. Нижний Новгород ш. Жиркомбината, 11
+                                        span.transportation__destination г Великий Новгород
+                                    .transportation__datetime
+                                        span.transportation__datetime-item 15:45
+                                        span.transportation__datetime-item 27.07.2022
+                                    .transportation__info
+                                        .transportation__info-item.transportation__info-item--white  20 т
+                                        .transportation__info-item.transportation__info-item--grow
+                                            .transportation__info-truck тентованный, контейнер, фургон, цельнометалл.
+                                li.transportation__item.item-width
+                                    .transportation__address
+                                        span.transportation__destination г Нижний Новгород
+                                        span.transportation__destination г Долгопрудный
+                                    .transportation__datetime
+                                        span.transportation__datetime-item 15:40
+                                        span.transportation__datetime-item 27.07.2022
+                                    .transportation__info
+                                        .transportation__info-item.transportation__info-item--white  10.924 т
+                                        .transportation__info-item.transportation__info-item--grow
+                                            .transportation__info-truck Рефрижератор
+                                li.transportation__item.item-width
+                                    .transportation__address
+                                        span.transportation__destination 603950 г. Нижний Новгород ш. Жиркомбината, 11
+                                        span.transportation__destination г Великий Новгород
+                                    .transportation__datetime
+                                        span.transportation__datetime-item 15:33
+                                        span.transportation__datetime-item 27.07.2022
+                                    .transportation__info
+                                        .transportation__info-item.transportation__info-item--white  20 т
+                                        .transportation__info-item.transportation__info-item--grow
+                                            .transportation__info-truck тентованный, контейнер, фургон, цельнометалл.
+                                li.transportation__item.item-width
+                                    .transportation__address
+                                        span.transportation__destination 603950 г. Нижний Новгород ш. Жиркомбината, 11
+                                        span.transportation__destination г Великий Новгород
+                                    .transportation__datetime
+                                        span.transportation__datetime-item 15:30
+                                        span.transportation__datetime-item 27.07.2022
+                                    .transportation__info
+                                        .transportation__info-item.transportation__info-item--white  20 т
+                                        .transportation__info-item.transportation__info-item--grow
+                                            .transportation__info-truck тентованный, контейнер, фургон, цельнометалл.
+                        .transportation__button-wrapper.transportation__register
+                            button.js-modal-trigger.button(data-trigger="registration") Зарегистрироваться бесплатно за 1 минуту
+
+            .page-block
+                .about
+                   .about__wrapper
+                       h2.block-title.block-title--mb Контакты
+                       .about__content
+                          .about__inner-content
+                              h3.block-sub_title.block-sub_title--mb Свяжитесь с нами
+                              .about__information
+                                 a(href="tel: +7 495 664-47-00" class="about__phone")
+                                     span +7 495 &nbsp;
+                                     |664-47-00
+                                 a(href="mailto: welcome@logist.cloud" class="about__mail") welcome@logist.cloud
+                          .about__inner-content
+                              h3.block-sub_title.block-sub_title--mb Приложение
+                              .about__information
+                                 ul.about__information-inner
+                                    li.about__list-item
+                                       a(href="#" class="about__link")
+                                          img(src="../../assets/img/icons/google.png" width="100%")
+
+                                    li.about__list-item
+                                       a(href="#" class="about__link about__link--pos")
+                                           img(src="../../assets/img/icons/apple.png" height="100%")
+                          .about__inner-content
+                              h3.block-sub_title.block-sub_title--mb Партнёры
+                              .about__information
+                                 ul.about__information-inner
+                                    li.about__list-item
+                                       a(href="#" class="about__link about__link--partner")
+                                           img(src="../../assets/img/icons/rts.png" height='100%')
+                                    li.about__list-item
+                                       a(href="#" class="about__link about__link--partner")
+                                           img(src="../../assets/img/icons/b2b.png" height='100%')
+
+block script
+
+block modals
+    .modal(data-target="registration" style="display: none")
+        .modal__window.js-modal-window(style="background-image: url(\"../../assets/img/photos/light-modal-clouds.png\")")
+            button.modal__close(data-close="registration" title="Закрыть")
+            .modal__header
+                h3.modal__title Регистрация
+            .modal__content
+                form#form-register.user-form.modal__form(action="#" method="POST" data-url="register")
+                    .user-form__section
+                        input.user-form__input(type="tel" placeholder="Ваш телефон" name="phoneNumber")
+                    .user-form__section
+                        input.user-form__submit(type="submit" value="Зарегистрироваться")
+    .modal(data-target="auth" style="display:none")
+        .modal__window.js-modal-window(style="background-image: url(\"../../assets/img/photos/light-modal-clouds.png\")")
+            button.modal__close(data-close="auth" title="Закрыть")
+            .modal__header
+                h3.modal__title Личный кабинет
+            .modal__content
+                form#form-auth.user-form.modal__form(action="#", method="POST", data-url="auth")
+                    .user-form__section
+                        input.user-form__input(type="text" placeholder="Логин" name="username")
+                    .user-form__section
+                        input.user-form__input(type="password" placeholder="Пароль" name="user_password")
+                    .user-form__section
+                        input.user-form__submit(type="submit" value="Войти")
+    .modal(data-target="callback" style="display:none")
+        .modal__window.js-modal-window(style="background-image: url(\"../../assets/img/photos/light-modal-clouds.png\")")
+            button.modal__close(data-close="callback" title="Закрыть")
+            .modal__header
+                h3.modal__title Заказать звонок
+            .modal__content
+                form#form-callback.user-form.modal__form(action="#", method="POST", data-url="callback")
+                    .user-form__section
+                        input.user-form__input(type="text" placeholder="Ваше имя" name="firstName")
+                    .user-form__section
+                        input.user-form__input(type="tel" placeholder="Телефон" name="phone_number")
+                    .user-form__section
+                        input.user-form__submit(type="submit" value="Войти")

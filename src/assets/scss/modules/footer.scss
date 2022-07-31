@@ -1,0 +1,94 @@
+.footer {
+  &__wrapper {
+    position: relative;
+    margin: 0 0 1.4rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media #{$tablet} {
+      margin: 1.4rem 0 3rem 0;
+    }
+
+    @media #{$desktop} {
+      margin: 5.4rem 3rem 3rem;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+
+    @media #{$desktopLG} {
+      justify-content: center;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 20rem;
+
+    @media #{$mobileLG} {
+      max-width: 100%;
+    }
+
+    @media #{$tablet} {
+      flex-direction: row;
+    }
+
+    @media #{$desktop} {
+      &:last-child {
+        margin-right: 2.4rem;
+      }
+    }
+
+    @media #{$desktopLG} {
+      &:last-child {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &__menu {
+    margin-bottom: 4.2rem;
+
+    @media #{$tablet} {
+      margin-bottom: 2.4rem;
+    }
+
+    @media #{$desktop} {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+
+      @media #{$tablet} {
+        margin-bottom: 0;
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  &__link {
+    font-family: $regularFont;
+    font-size: 1.4rem;
+    line-height: 114%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    text-align: center;
+    color: $secondFontColor;
+
+    &:hover, &:focus, &:active {
+      color: $activator;
+    }
+  }
+}

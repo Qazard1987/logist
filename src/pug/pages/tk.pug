@@ -1,0 +1,303 @@
+extends ../layout/tk-layout
+
+block variables
+    - var title = 'Для транспортных компаний';
+    - var description = '';
+    - var pageClass = 'body';
+
+block content
+    div.main
+        .wrapper
+            .wrapper__inner
+               .page-block
+                .transportation
+                    .transportation__wrapper
+                        h2.block-title.block-title--mb Актуальные перевозки прямо сейчас
+                        .transportation__wrapper-inner
+                            ul#masonry.transportation__list
+                                li.transportation__item.item-width.transportation__item--white
+                                    .transportation__address
+                                        span.transportation__destination г Нижний Новгород
+                                        span.transportation__destination г Долгопрудный
+                                    .transportation__datetime
+                                        span.transportation__datetime-item 16:05
+                                        span.transportation__datetime-item 27.07.2022
+                                    .transportation__info
+                                        .transportation__info-item.transportation__info-item--grey  10.924 т
+                                        .transportation__info-item.transportation__info-item--grow
+                                            .transportation__info-truck Рефрижератор
+                                li.transportation__item.item-width.transportation__item--white
+                                    .transportation__address
+                                        span.transportation__destination 603950 г. Нижний Новгород ш. Жиркомбината, 11
+                                        span.transportation__destination г Великий Новгород
+                                    .transportation__datetime
+                                        span.transportation__datetime-item 16:04
+                                        span.transportation__datetime-item 27.07.2022
+                                    .transportation__info
+                                        .transportation__info-item.transportation__info-item--grey   20 т
+                                        .transportation__info-item.transportation__info-item--grow
+                                            .transportation__info-truck тентованный, контейнер, фургон, цельнометалл.
+                                li.transportation__item.item-width.transportation__item--white
+                                    .transportation__address
+                                        span.transportation__destination г Нижний Новгород
+                                        span.transportation__destination г Долгопрудный
+                                    .transportation__datetime
+                                        span.transportation__datetime-item 16:03
+                                        span.transportation__datetime-item 27.07.2022
+                                    .transportation__info
+                                        .transportation__info-item.transportation__info-item--grey   10.924 т
+                                        .transportation__info-item.transportation__info-item--grow
+                                            .transportation__info-truck Рефрижератор
+                                li.transportation__item.item-width.transportation__item--white
+                                    .transportation__address
+                                        span.transportation__destination 603950 г. Нижний Новгород ш. Жиркомбината, 11
+                                        span.transportation__destination г Великий Новгород
+                                    .transportation__datetime
+                                        span.transportation__datetime-item 16:02
+                                        span.transportation__datetime-item 27.07.2022
+                                    .transportation__info
+                                        .transportation__info-item.transportation__info-item--grey   20 т
+                                        .transportation__info-item.transportation__info-item--grow
+                                            .transportation__info-truck тентованный, контейнер, фургон, цельнометалл.
+                                li.transportation__item.item-width.transportation__item--white
+                                    .transportation__address
+                                        span.transportation__destination г Нижний Новгород
+                                        span.transportation__destination г Долгопрудный
+                                    .transportation__datetime
+                                        span.transportation__datetime-item 16:01
+                                        span.transportation__datetime-item 27.07.2022
+                                    .transportation__info
+                                        .transportation__info-item.transportation__info-item--grey   10.924 т
+                                        .transportation__info-item.transportation__info-item--grow
+                                            .transportation__info-truck Рефрижератор
+                                li.transportation__item.item-width.transportation__item--white
+                                    .transportation__address
+                                        span.transportation__destination 603950 г. Нижний Новгород ш. Жиркомбината, 11
+                                        span.transportation__destination г Великий Новгород
+                                    .transportation__datetime
+                                        span.transportation__datetime-item 15:45
+                                        span.transportation__datetime-item 27.07.2022
+                                    .transportation__info
+                                        .transportation__info-item.transportation__info-item--grey   20 т
+                                        .transportation__info-item.transportation__info-item--grow
+                                            .transportation__info-truck тентованный, контейнер, фургон, цельнометалл.
+                                li.transportation__item.item-width.transportation__item--white
+                                    .transportation__address
+                                        span.transportation__destination г Нижний Новгород
+                                        span.transportation__destination г Долгопрудный
+                                    .transportation__datetime
+                                        span.transportation__datetime-item 15:40
+                                        span.transportation__datetime-item 27.07.2022
+                                    .transportation__info
+                                        .transportation__info-item.transportation__info-item--grey   10.924 т
+                                        .transportation__info-item.transportation__info-item--grow
+                                            .transportation__info-truck Рефрижератор
+                                li.transportation__item.item-width.transportation__item--white
+                                    .transportation__address
+                                        span.transportation__destination 603950 г. Нижний Новгород ш. Жиркомбината, 11
+                                        span.transportation__destination г Великий Новгород
+                                    .transportation__datetime
+                                        span.transportation__datetime-item 15:33
+                                        span.transportation__datetime-item 27.07.2022
+                                    .transportation__info
+                                        .transportation__info-item.transportation__info-item--grey   20 т
+                                        .transportation__info-item.transportation__info-item--grow
+                                            .transportation__info-truck тентованный, контейнер, фургон, цельнометалл.
+                                li.transportation__item.item-width.transportation__item--white
+                                    .transportation__address
+                                        span.transportation__destination 603950 г. Нижний Новгород ш. Жиркомбината, 11
+                                        span.transportation__destination г Великий Новгород
+                                    .transportation__datetime
+                                        span.transportation__datetime-item 15:30
+                                        span.transportation__datetime-item 27.07.2022
+                                    .transportation__info
+                                        .transportation__info-item.transportation__info-item--grey   20 т
+                                        .transportation__info-item.transportation__info-item--grow
+                                            .transportation__info-truck тентованный, контейнер, фургон, цельнометалл.
+                        .transportation__button-wrapper.transportation__register
+                            button.js-modal-trigger.button(data-trigger="registration") Зарегистрироваться бесплатно за 1 минуту
+
+               .page-block
+                   .faq
+                       h2.block-title.block-title--mb Частые вопросы
+                       .faq__wrapper
+                           .faq__content
+                               .faq__btns
+                                   button.faq__button(data-faq="connection") Как подключить систему “Облачная логистика”?
+                                   .faq__answer-sm(data-answer="connection")
+                                       .faq__answer-inner
+                                           p.faq__text.faq__text--mb Для подключения системы Вам необходимо:
+                                           ul.faq__list
+                                               li.faq__list-item.faq__text Пройти быструю регистрацию в системе
+                                               li.faq__list-item.faq__text Заполнить реквизиты своей компании в форме.
+                                               li.faq__list-item.faq__text Запросить и оплатить счёт.
+                                   button.faq__button(data-faq="documents") В системе “Облачная логистика” есть электронный документооборот?
+                                   .faq__answer-sm(data-answer="documents")
+                                       .faq__answer-inner
+                                           p.faq__text Электронный документооборот в Облачной
+                                                  |логистике позволяет мгновенно отправлять бухгалтерские документы заказчикам
+                                                  |и значительно экономить на бумаге и курьерской доставке документов.
+                                   button.faq__button(data-faq="tracking") Как отслеживать груз в системе “Облачная логистика”?
+                                   .faq__answer-sm(data-answer="tracking")
+                                       .faq__answer-inner
+                                               p.faq__text.faq__text--mb В разделе “Отслеживание груза”
+                                                    | Вы сможете найти любой рейс по номеру рейса, и др. параметрам.
+                                               p.faq__text.faq__text--mb Отслеживание рейса осуществляется с помощью 2 вариантов:
+                                               ul.faq__list
+                                                   li.faq__list-item.faq__text С помощью мобильного приложения “Облачная логистика”.
+                                                       |Водитель устанавливает мобильное приложение на телефон и
+                                                       |отмечается, что забрал груз. С этого момента движение водителя отражается на карте.
+                                                   li.faq__list-item.faq__text Отслеживание груза с помощью системы MOVIZOR.
+                                   button.faq__button(data-faq="searching") Транспортная компания может найти новых заказчиков в системе “Облачная логистика”?
+                                   .faq__answer-sm(data-answer="searching")
+                                           .faq__answer-inner
+                                               p.faq__text Транспортные компании имеют возможность откликаться
+                                                      | на заявки заказчиков, кто разместил тендеры для всех перевозчиков.
+                                                      | Предлагая самую низкую цену на перевозку, транспортная компания выигрывает тендер и заключает договор с заказчиком
+                                                      | для дальнейшего сотрудничества.
+                               .faq__answers-lg
+                                   .faq__answer-inner.animate__animated.animate__flipInX(data-answer-lg="connection" hidden="hidden")
+                                       h4.faq__title Как подключить систему "Облачная логистика"?
+                                       p.faq__text.faq__text--mb Для подключения системы Вам необходимо:
+                                       ul.faq__list
+                                           li.faq__list-item.faq__text Пройти быструю регистрацию в системе
+                                           li.faq__list-item.faq__text Заполнить реквизиты своей компании в форме.
+                                           li.faq__list-item.faq__text Запросить и оплатить счёт.
+                                   .faq__answer-inner.animate__animated.animate__flipInX(data-answer-lg="documents" hidden="hidden")
+                                       h4.faq__title В системе "Облачная логистика" есть электронный документооборот?
+                                       p.faq__text Электронный документооборот в Облачной
+                                           | логистике позволяет мгновенно отправлять бухгалтерские документы заказчикам
+                                           | и значительно экономить на бумаге и курьерской доставке документов.
+                                   .faq__answer-inner.animate__animated.animate__flipInX(data-answer-lg="tracking" hidden="hidden")
+                                       h4.faq__title Как отслеживать груз в системе "Облачная логистика"?
+                                       p.faq__text.faq__text--mb В разделе “Отслеживание груза”
+                                           | Вы сможете найти любой рейс по номеру рейса, и др. параметрам.
+                                       p.faq__text.faq__text--mb Отслеживание рейса осуществляется с помощью 2 вариантов:
+                                       ul.faq__list
+                                           li.faq__list-item.faq__text С помощью мобильного приложения “Облачная логистика”.
+                                               | Водитель устанавливает мобильное приложение на телефон и
+                                               | отмечается, что забрал груз. С этого момента движение водителя отражается на карте.
+                                           li.faq__list-item.faq__text Отслеживание груза с помощью системы MOVIZOR.
+                                   .faq__answer-inner.animate__animated.animate__flipInX(data-answer-lg="searching" hidden="hidden")
+                                       h4.faq__title Транспортная компания может найти новых заказчиков в системе "Облачная логистика"?
+                                       p.faq__text Транспортные компании имеют возможность откликаться
+                                           | на заявки заказчиков, кто разместил тендеры для всех перевозчиков.
+                                           | Предлагая самую низкую цену на перевозку, транспортная компания выигрывает тендер и заключает договор с заказчиком
+                                           | для дальнейшего сотрудничества.
+               .page-block
+                   .news
+                       h2.block-title.block-title--mb
+                           a.block-title__link(href="#" title="Новости мира логистики")
+                                  span Новости мира логистики
+                       .news__wrapper
+                           .swiper.swiper-container(style="overflow-x: hidden; position: relative; min-height: 200px")
+                               .swiper-wrapper
+                                   .swiper-slide
+                                       button.news__button.js-modal-btn(data-video-id="X7LMPgroNUo")
+                                           .news__img-wrapper
+                                               img.news__image(src="../../assets/img/preview/preview1.png" alt="Новость 1")
+                                               span.news__play
+                                                  span.news__play-inner
+                                           h4.news__title КОНФИСКАЦИЯ МАШИН У ВОДИТЕЛЕЙ. ШТРАФЫ ЗА ВЫБРОС МУСОРА ИЗ АВТО | Новости недели за 4 минуты
+                                           span.news__date 24.07.2021
+                                   .swiper-slide
+                                       button.news__button.js-modal-btn(data-video-id="tkkYfK3euTQ")
+                                           .news__img-wrapper
+                                               img.news__image(src="../../assets/img/preview/preview2.png" alt="Новость 2")
+                                               span.news__play
+                                                   span.news__play-inner
+                                           h4.news__title НОВАЯ ЦИФРОВАЯ ПЛАТФОРМА ДЛЯ ВОДИТЕЛЕЙ. УСИЛЕНИЕ НАКАЗАНИЯ ЗА ЕЗДУ БЕЗ ПРАВ/ Новости недели за 3 минуты
+                                           span.news__date 18.07.2021
+                                   .swiper-slide
+                                       button.news__button.js-modal-btn(data-video-id="eQstaTS_IE8")
+                                           .news__img-wrapper
+                                               img.news__image(src="../../assets/img/preview/preview1.png" alt="Новость 3")
+                                               span.news__play
+                                                   span.news__play-inner
+                                           h4.news__title КОНФИСКАЦИЯ МАШИН У ВОДИТЕЛЕЙ. ШТРАФЫ ЗА ВЫБРОС МУСОРА ИЗ АВТО | Новости недели за 4 минуты
+                                           span.news__date 11.07.2021
+                                   .swiper-slide
+                                       button.news__button.js-modal-btn(data-video-id="lQ8n5xpbxmc")
+                                           .news__img-wrapper
+                                               img.news__image(src="../../assets/img/preview/preview2.png" alt="Новость 4")
+                                               span.news__play
+                                                   span.news__play-inner
+                                           h4.news__title НОВАЯ ЦИФРОВАЯ ПЛАТФОРМА ДЛЯ ВОДИТЕЛЕЙ. УСИЛЕНИЕ НАКАЗАНИЯ ЗА ЕЗДУ БЕЗ ПРАВ/ Новости недели за 3 минуты
+                                           span.news__date 11.07.2021
+                               .swiper-button-prev
+                               .swiper-button-next
+
+               .page-block
+                   .about
+                    .about__wrapper
+                        h2.block-title.block-title--mb Контакты
+                        .about__content
+                            .about__inner-content
+                                h3.block-sub_title.block-sub_title--mb Свяжитесь с нами
+                                .about__information
+                                    a(href="tel: +7 495 664-47-00" class="about__phone")
+                                        span +7 495 &nbsp;
+                                        | 664-47-00
+                                    a(href="mailto: welcome@logist.cloud" class="about__mail") welcome@logist.cloud
+                            .about__inner-content
+                                h3.block-sub_title.block-sub_title--mb Приложение
+                                .about__information
+                                    ul.about__information-inner
+                                        li.about__list-item
+                                            a(href="#" class="about__link")
+                                                img(src="../../assets/img/icons/google.png" width="100%")
+
+                                        li.about__list-item
+                                            a(href="#" class="about__link about__link--pos")
+                                                img(src="../../assets/img/icons/apple.png" height="100%")
+                            .about__inner-content
+                                h3.block-sub_title.block-sub_title--mb Партнёры
+                                .about__information
+                                    ul.about__information-inner
+                                        li.about__list-item
+                                            a(href="#" class="about__link about__link--partner")
+                                                img(src="../../assets/img/icons/rts.png" height='100%')
+                                        li.about__list-item
+                                            a(href="#" class="about__link about__link--partner")
+                                                img(src="../../assets/img/icons/b2b.png" height='100%')
+
+block modals
+    .modal(data-target="registration" style="display:none")
+        .modal__window.js-modal-window(style="background-image: url(\"../../assets/img/photos/light-modal-clouds.png\")")
+            button.modal__close(data-close="registration" title="Закрыть")
+            .modal__header
+                h3.modal__title Регистрация
+            .modal__content
+                form#form-register.user-form.modal__form(action="#" method="POST" data-url="register")
+                    .user-form__section
+                        input.user-form__input(type="tel" placeholder="Ваш телефон" name="phoneNumber")
+                    .user-form__section
+                        input.user-form__submit(type="submit" value="Зарегистрироваться")
+    .modal(data-target="auth" style="display:none")
+        .modal__window.js-modal-window(style="background-image: url(\"../../assets/img/photos/light-modal-clouds.png\")")
+            button.modal__close(data-close="auth" title="Закрыть")
+            .modal__header
+                h3.modal__title Личный кабинет
+            .modal__content
+                form#form-auth.user-form.modal__form(action="#", method="POST", data-url="auth")
+                    .user-form__section
+                        input.user-form__input(type="text" placeholder="Логин" name="username")
+                    .user-form__section
+                        input.user-form__input(type="password" placeholder="Пароль" name="user_password")
+                    .user-form__section
+                        input.user-form__submit(type="submit" value="Войти")
+    .modal(data-target="callback" style="display:none")
+        .modal__window.js-modal-window(style="background-image: url(\"../../assets/img/photos/light-modal-clouds.png\")")
+            button.modal__close(data-close="callback" title="Закрыть")
+            .modal__header
+                h3.modal__title Заказать звонок
+            .modal__content
+                form#form-callback.user-form.modal__form(action="#", method="POST", data-url="callback")
+                    .user-form__section
+                        input.user-form__input(type="text" placeholder="Ваше имя" name="firstName")
+                    .user-form__section
+                        input.user-form__input(type="tel" placeholder="Телефон" name="phone_number")
+                    .user-form__section
+                        input.user-form__submit(type="submit" value="Войти")
+
+block script
