@@ -210,7 +210,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
 //Высота iframe видео модалки
 document.addEventListener('DOMContentLoaded', function () {
     let modalBtns = document.querySelectorAll('.js-modal-btn');
@@ -224,9 +223,12 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', calcModalHeight);
 
     function calcModalHeight() {
-        let wrapper = document.querySelector('.modal-video-inner'),
+        let wrapper = document.querySelector('.modal-video-inner');
+        if(!wrapper) return;
             frame = wrapper.querySelector('iframe'),
             height = wrapper.clientWidth / 2;
+
+
 
         frame.style.height = height + 'px'
     }

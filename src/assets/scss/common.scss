@@ -799,9 +799,10 @@
   bottom: 0;
 
   background-color: rgba(0, 0, 0, .7);
+  overflow-y: auto;
 
   display: flex;
-  padding: 0 1rem 0 1rem;
+  padding: 2rem;
 
   &__window {
     position: relative;
