@@ -70,30 +70,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Модальные окна
 document.addEventListener("DOMContentLoaded", function () {
-    let triggers = document.querySelectorAll('.js-modal-trigger');
+    let triggers = document.querySelectorAll('.js-modal-trigger'),
+        body = document.querySelector('.body');
 
     if (!triggers.length) return;
 
     function addOpenModalListeners() {
         for (let i = 0; i < triggers.length; i++) {
             let current = triggers[i];
-
             current.addEventListener('click', openModal);
         }
     }
 
     function openModal() {
-        let attr = this.dataset.trigger;
-        let modal = document.querySelector(`[data-target=${attr}]`);
+        let attr = this.dataset.trigger,
+            modal = document.querySelector(`[data-target=${attr}]`);
+        let scrollWidth = window.innerWidth - body.clientWidth;
 
         if (modal) {
+
+            body.style.overflowY = 'hidden';
+            body.style.paddingRight = scrollWidth + 'px'
             modal.style.display = 'flex';
             modal
                 .querySelector('.js-modal-window')
                 .classList.add('animate__animated', 'animate__fadeInUp')
             let btnClose = modal.querySelector(`[data-close=${attr}]`);
 
-            btnClose.addEventListener('click', closeModal)
+            btnClose.addEventListener('click', closeModal);
+
+            let innerHeight = modal.querySelector('.js-modal-window').clientHeight;
+
+            if (innerHeight + 40 < document.documentElement.clientHeight) {
+                modal.classList.add('n-scrollbar');
+            }
         }
     }
 
@@ -101,11 +111,15 @@ document.addEventListener("DOMContentLoaded", function () {
         let attr = this.dataset.close;
         let modal = document.querySelector(`[data-target=${attr}]`);
         if (modal) {
+            body.style.overflowY = 'auto';
+            body.style.paddingRight = 0;
             modal.style.display = 'none'
 
             modal
                 .querySelector('.js-modal-window')
-                .classList.remove('animate__animated', 'animate__fadeInUp')
+                .classList.remove('animate__animated', 'animate__fadeInUp', 'n-scrollbar');
+
+            modal.classList.remove('n-scrollbar');
         }
     }
 
@@ -224,10 +238,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function calcModalHeight() {
         let wrapper = document.querySelector('.modal-video-inner');
-        if(!wrapper) return;
-            frame = wrapper.querySelector('iframe'),
+        if (!wrapper) return;
+        frame = wrapper.querySelector('iframe'),
             height = wrapper.clientWidth / 2;
-
 
 
         frame.style.height = height + 'px'

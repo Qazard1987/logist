@@ -7,6 +7,8 @@
 .swiper-container {
   padding: 25px;
 
+  mask: linear-gradient(90deg,rgba(196,196,196,0) 0%,rgba(196,196,196,0) 30px,#c4c4c4 45px,#c4c4c4 calc(100% - 45px),rgba(196,196,196,0) calc(100% - 30px),rgba(196,196,196,0) 100%);
+
   @media #{$tablet} {
     padding: 50px;
   }
@@ -26,6 +28,11 @@
   &::after {
     content: url("/assets/img/icons/swiper-left.svg");
   }
+}
+
+.swiper-container{
+  padding-bottom: 0!important;
+  padding-top: 0!important;
 }
 
 //Modal video styles
@@ -86,11 +93,32 @@
   width: 3.5rem;
   height: 3.5rem;
 
-  &::before{
+  &:before, &:after {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
 
+    content: '';
     display: inline-block;
-    content: url("/assets/img/icons/times-30w.svg");
-    width: 100%;
-    height: 100%;
+    width: 3.5rem;
+    height: 2px;
+
+    background: #ffffff;
+    transition: all .3s ease-in;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &:hover{
+    &:before, &:after {
+      background: $activator;
+      transition: all .3s ease-in;
+    }
   }
 }

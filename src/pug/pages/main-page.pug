@@ -138,37 +138,39 @@ block content
 
             .page-block
                 .about
-                   .about__wrapper
-                       h2.block-title.block-title--mb Контакты
-                       .about__content
-                          .about__inner-content
-                              h3.block-sub_title.block-sub_title--mb Свяжитесь с нами
-                              .about__information
-                                 a(href="tel: +7 495 664-47-00" class="about__phone")
-                                     span +7 495 &nbsp;
-                                     |664-47-00
-                                 a(href="mailto: welcome@logist.cloud" class="about__mail") welcome@logist.cloud
-                          .about__inner-content
-                              h3.block-sub_title.block-sub_title--mb Приложение
-                              .about__information
-                                 ul.about__information-inner
-                                    li.about__list-item
-                                       a(href="#" class="about__link")
-                                          img(src="../../assets/img/icons/google.png" width="100%")
+                    .about__wrapper
+                        h2.block-title.block-title--mb Контакты
+                        .about__content
+                            .about__inner-content
+                                h3.block-sub_title.block-sub_title--mb Свяжитесь с нами
+                                .about__information
+                                    div
+                                        a(href="tel: +7 495 664-47-00" class="about__phone")
+                                            span +7 495 &nbsp;
+                                            | 664-47-00
+                                    div
+                                        a(href="mailto: welcome@logist.cloud" class="about__mail") welcome@logist.cloud
+                            .about__inner-content
+                                h3.block-sub_title.block-sub_title--mb Приложение
+                                .about__information
+                                    ul.about__information-inner
+                                        li.about__list-item
+                                            a(href="#" class="about__link")
+                                                img(src="../../assets/img/icons/google.png" width="100%")
 
-                                    li.about__list-item
-                                       a(href="#" class="about__link about__link--pos")
-                                           img(src="../../assets/img/icons/apple.png" height="100%")
-                          .about__inner-content
-                              h3.block-sub_title.block-sub_title--mb Партнёры
-                              .about__information
-                                 ul.about__information-inner
-                                    li.about__list-item
-                                       a(href="#" class="about__link about__link--partner")
-                                           img(src="../../assets/img/icons/rts.png" height='100%')
-                                    li.about__list-item
-                                       a(href="#" class="about__link about__link--partner")
-                                           img(src="../../assets/img/icons/b2b.png" height='100%')
+                                        li.about__list-item
+                                            a(href="#" class="about__link about__link--pos")
+                                                img(src="../../assets/img/icons/apple.png" height="100%")
+                            .about__inner-content
+                                h3.block-sub_title.block-sub_title--mb Партнёры
+                                .about__information
+                                    ul.about__information-inner
+                                        li.about__list-item
+                                            a(href="#" class="about__link about__link--partner")
+                                                img(src="../../assets/img/icons/rts.png" height='100%')
+                                        li.about__list-item
+                                            a(href="#" class="about__link about__link--partner")
+                                                img(src="../../assets/img/icons/b2b.png" height='100%')
 
 block script
 
@@ -176,6 +178,7 @@ block modals
     .modal(data-target="registration" style="display: none")
         .modal__window.js-modal-window(style="background-image: url(\"../../assets/img/photos/light-modal-clouds.png\")")
             button.modal__close(data-close="registration" title="Закрыть")
+                .modal__close-inner
             .modal__header
                 h3.modal__title Регистрация
             .modal__content
@@ -187,6 +190,7 @@ block modals
     .modal(data-target="auth" style="display:none")
         .modal__window.js-modal-window(style="background-image: url(\"../../assets/img/photos/light-modal-clouds.png\")")
             button.modal__close(data-close="auth" title="Закрыть")
+                .modal__close-inner
             .modal__header
                 h3.modal__title Личный кабинет
             .modal__content
@@ -200,6 +204,7 @@ block modals
     .modal(data-target="callback" style="display:none")
         .modal__window.js-modal-window(style="background-image: url(\"../../assets/img/photos/light-modal-clouds.png\")")
             button.modal__close(data-close="callback" title="Закрыть")
+                .modal__close-inner
             .modal__header
                 h3.modal__title Заказать звонок
             .modal__content

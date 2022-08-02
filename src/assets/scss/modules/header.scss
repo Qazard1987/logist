@@ -1,4 +1,11 @@
 .header-w {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
+
+  overscroll-behavior: contain;
+
   position: sticky;
   z-index: 200;
   top: 0;
@@ -14,7 +21,7 @@
     }
 
     @media #{$desktop} {
-      padding: .5rem 3rem;
+      padding: 2rem 3rem;
     }
 
     @media #{$desktopLG} {

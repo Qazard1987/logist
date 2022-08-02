@@ -6,9 +6,13 @@
 .button-image {
   display: flex;
   align-items: center;
-  transition: all ease .3s;
 
-  &:hover *, &:active *, &:focus * {
+  & img, & span {
+    transition: all ease .3s;
+  }
+
+  &:hover span, &:active span, &:focus span {
+    transition: all ease .3s;
     color: $activator;
   }
 
@@ -387,15 +391,19 @@
 
     font-size: 3.2rem;
     color: $mainFontColor;
+    transition: color .3s ease-in;
 
     & span {
+      transition: color .3s ease-in;
       color: $secondFontColor;
     }
 
     &:hover, &:active, &:focus {
+      transition: color .3s ease-in;
       color: $activator;
 
       & span {
+        transition: color .3s ease-in;
         color: $activator;
       }
     }
@@ -419,12 +427,22 @@
     line-height: 133%;
     color: $activator;
 
+    border: 1px solid transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    transition: border-bottom-color .3s ease-in;
+
     @media #{$tabletH} {
       font-size: 2.4rem;
     }
 
     &:hover, &:active, &:focus {
-      color: $secondFontColor;
+      transition: border-bottom-color .3s ease-in;
+      border: 1px solid $activator;
+      border-top: none;
+      border-right: none;
+      border-left: none;
     }
   }
 }
@@ -482,7 +500,12 @@
     display: flex;
     align-items: center;
 
+    & *, & *, & * {
+      transition: all .3s ease;
+    }
+
     &:hover *, &:active *, &:focus * {
+      transition: all .3s ease;
       color: $activator;
     }
 
@@ -683,6 +706,7 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
 
     &:hover *, &:active *, &:focus * {
+      transition: color .3s ease-in;
       color: $activator;
     }
 
@@ -722,6 +746,7 @@
     }
 
     &--zk {
+      transition: color .3s ease-in;
       color: #ffffff;
 
       &::before {
@@ -748,13 +773,17 @@
       }
 
       &::after {
-        content: url("/assets/img/icons/arrow-light.svg");
+        font-family: FontAwesome;
+        content: '\f105';
+        font-size: 2.5rem;
 
         margin-left: 1rem;
+        padding-bottom: .4rem;
       }
     }
 
     &--tk {
+      transition: color .3s ease-in;
       color: $mainFontColor;
 
       &::before {
@@ -781,9 +810,12 @@
       }
 
       &::after {
-        content: url("/assets/img/icons/arrow-dark.svg");
+        font-family: FontAwesome;
+        content: '\f105';
+        font-size: 2.5rem;
 
         margin-left: 1rem;
+        padding-bottom: .4rem;
       }
     }
   }
@@ -798,7 +830,8 @@
   right: 0;
   bottom: 0;
 
-  background-color: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, 0.7);
+
   overflow-y: auto;
 
   display: flex;
@@ -806,12 +839,14 @@
 
   &__window {
     position: relative;
-    z-index: 121;
+
+    z-index: 9999;
     margin: auto;
     padding: 3rem;
 
     width: 100%;
     border-radius: 2rem;
+    backdrop-filter: blur(20px);
 
     max-width: 619px;
     min-width: 300px;
@@ -844,20 +879,45 @@
       top: 40px;
       right: 40px;
 
+      width: 30px;
+      height: 30px;
+    }
 
+    &:hover &-inner::before, &:hover &-inner::after {
+      background: $activator;
+      transition: all .3s ease-in;
+    }
+  }
+
+  &__close-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &:before, &:after {
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 0;
+
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 2px;
+
+      background: #a6a6a6;
+      transition: all .3s ease-in;
+
+      @media #{$tablet} {
+        width: 30px;
+      }
     }
 
     &::before {
-      content: url("/assets/img/icons/times.svg");
+      transform: rotate(-45deg);
+    }
 
-      width: 20px;
-      height: 20px;
-
-      @media #{$tablet} {
-        content: url("/assets/img/icons/times30.svg");
-        width: 30px;
-        height: 30px;
-      }
+    &::after {
+      transform: rotate(45deg);
     }
   }
 
@@ -905,6 +965,11 @@
     border-left: none;
     border-right: none;
 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+
     font-family: $regularFont;
     font-size: 1.4rem;
     line-height: 143%;
@@ -933,7 +998,7 @@
       }
     }
 
-    &.error{
+    &.error {
       color: $errorColor;
       border-bottom-color: $errorColor;
     }
@@ -958,6 +1023,10 @@
     color: $mainFontColor;
     transition: all .3s ease;
 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
     &:hover,
     &:focus {
       background-color: $secondFontColor;
@@ -980,11 +1049,11 @@
   }
 }
 
-.error{
+.error {
   font-size: 1.2rem;
   color: $errorColor;
 
-  &__form-field{
+  &__form-field {
     margin-top: 1rem;
   }
 }
@@ -1046,6 +1115,7 @@
     border-radius: 2rem;
 
     margin-bottom: 2rem;
+    backdrop-filter: blur(20px);
 
     &--white {
       background: #ffffff;
@@ -1061,6 +1131,7 @@
   }
 
   &__destination {
+    font-family: $mediumFont;
     font-size: 1.4rem;
     line-height: 143%;
 
@@ -1468,7 +1539,7 @@
     &:hover .news__play,
     &:focus .news__play,
     &:active .news__play {
-      background-color: $secondFontColor;
+      background-color: $activator;
       transition: background-color .2s ease-out;
     }
 
@@ -1540,7 +1611,7 @@
     height: 50px;
 
     border-radius: 50%;
-    background-color: $activator;
+    background-color: $secondFontColor;
 
     transition: background-color .2s ease-out;
   }
@@ -1561,8 +1632,19 @@
   }
 }
 
+.n-scrollbar {
+  & {
+    scrollbar-width: none; /* firefox */
+  }
+
+  &::-webkit-scrollbar { /* webkit */
+    width: 0;
+    height: 0;
+  }
+}
+
 //masonry
-.item-width{
+.item-width {
   width: 100%;
 
   @media #{$tablet} {
