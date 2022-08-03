@@ -56,12 +56,12 @@ document.addEventListener("DOMContentLoaded", function () {
     function showStickyHeader() {
         if (window.pageYOffset > coord) {
             stickyHeader.style.display = 'block';
-            if(!stickyHeader.classList.contains('fixed')){
+            if (!stickyHeader.classList.contains('fixed')) {
                 stickyHeader.classList.add('fixed')
             }
             addJsAnimation(stickyHeader);
         } else {
-            if(stickyHeader.classList.contains('fixed')){
+            if (stickyHeader.classList.contains('fixed')) {
                 stickyHeader.classList.remove('fixed')
             }
             removeAnimation(stickyHeader);
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 .classList.add('animate__animated', 'animate__fadeInUp')
             let btnClose = modal.querySelector(`[data-close=${attr}]`);
 
-            btnClose.addEventListener('click', closeModal);
+            modal.addEventListener('click', closeModal);
 
             let innerHeight = modal.querySelector('.js-modal-window').clientHeight;
 
@@ -127,19 +127,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function closeModal() {
-        let attr = this.dataset.close;
-        let modal = document.querySelector(`[data-target=${attr}]`);
-        if (modal) {
+    function closeModal(event) {
+        let target = event.target,
+            button = target.closest('[data-close]'),
+            layout = target.closest('.modal'),
+            window = target.closest('.js-modal-window');
+
+        if (button || layout && !window) {
+            let body = document.querySelector('.body');
+
             body.style.overflowY = 'scroll';
             body.style.paddingRight = 0;
-            modal.style.display = 'none'
 
-            modal
-                .querySelector('.js-modal-window')
+            layout.style.display = 'none';
+            layout.classList.remove('n-scrollbar');
+
+            layout.querySelector('.js-modal-window')
                 .classList.remove('animate__animated', 'animate__fadeInUp', 'n-scrollbar');
-
-            modal.classList.remove('n-scrollbar');
         }
     }
 
