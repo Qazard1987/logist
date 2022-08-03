@@ -56,8 +56,14 @@ document.addEventListener("DOMContentLoaded", function () {
     function showStickyHeader() {
         if (window.pageYOffset > coord) {
             stickyHeader.style.display = 'block';
+            if(!stickyHeader.classList.contains('fixed')){
+                stickyHeader.classList.add('fixed')
+            }
             addJsAnimation(stickyHeader);
         } else {
+            if(stickyHeader.classList.contains('fixed')){
+                stickyHeader.classList.remove('fixed')
+            }
             removeAnimation(stickyHeader);
             stickyHeader.style.display = 'none';
         }
