@@ -1,12 +1,16 @@
 .header-w {
+  position: sticky;
   position: -webkit-sticky;
   position: -moz-sticky;
   position: -o-sticky;
   position: -ms-sticky;
 
+  -webkit-transform:translateZ(1px);
+  -moz-transform:translateZ(1px);
+  -o-transform:translateZ(1px);
+  transform:translateZ(1px);
   overscroll-behavior: contain;
 
-  position: sticky;
   z-index: 200;
   top: 0;
   padding-bottom: 1.4rem;

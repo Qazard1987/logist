@@ -1515,18 +1515,19 @@
 .news {
 
   &__wrapper {
-    padding-bottom: 8rem;
+    margin-bottom: 8rem;
+    position: relative;
 
     @media #{$tabletH} {
-      padding-bottom: 10rem;
+      margin-bottom: 10rem;
     }
 
     @media #{$desktop} {
-      padding-bottom: 15rem !important;
+      margin-bottom: 15rem !important;
     }
 
     @media #{$desktopLG} {
-      padding-bottom: 22rem !important;
+      margin-bottom: 22rem !important;
     }
   }
 

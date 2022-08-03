@@ -35,25 +35,39 @@ document.addEventListener("DOMContentLoaded", function () {
 //Появление header на главной странице при скролле
 document.addEventListener("DOMContentLoaded", function () {
     let stickyHeader = document.querySelector('.js-visibility'),
-        logoBlock = document.querySelector('.js-logo');
+        logoBlock = document.querySelector('.js-logo'),
+        innerWidth = window.innerWidth;
 
     if (!stickyHeader || !logoBlock) return;
 
+    let coord = getLogoBottomCoord();
+
     document.addEventListener('scroll', showStickyHeader);
-    window.addEventListener('resize', showStickyHeader);
+    window.addEventListener('resize', showStickyHeaderResize);
     showStickyHeader();
 
+
     function getLogoBottomCoord() {
-        return logoBlock.getBoundingClientRect().top + logoBlock.clientHeight;
+        let box = logoBlock.getBoundingClientRect();
+
+        return box.top + window.pageYOffset + logoBlock.clientHeight;
     }
 
     function showStickyHeader() {
-        if (window.pageYOffset > getLogoBottomCoord() + 200) {
+        if (window.pageYOffset > coord) {
             stickyHeader.style.display = 'block';
             addJsAnimation(stickyHeader);
         } else {
             removeAnimation(stickyHeader);
             stickyHeader.style.display = 'none';
+        }
+    }
+
+    function showStickyHeaderResize() {
+        if (innerWidth !== window.innerWidth) {
+            coord = getLogoBottomCoord();
+            innerWidth = window.innerWidth;
+            showStickyHeader();
         }
     }
 
@@ -111,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let attr = this.dataset.close;
         let modal = document.querySelector(`[data-target=${attr}]`);
         if (modal) {
-            body.style.overflowY = 'auto';
+            body.style.overflowY = 'scroll';
             body.style.paddingRight = 0;
             modal.style.display = 'none'
 
@@ -129,12 +143,14 @@ document.addEventListener("DOMContentLoaded", function () {
 //Переключение видимости блоков с ответами (faq) для sm и lg версии
 document.addEventListener("DOMContentLoaded", function () {
     let btns = document.querySelectorAll('[data-faq]'),
+        innerWidth = window.innerWidth,
+        innerWidth2 = window.innerWidth,
         separatop = 768;
 
     if (!btns.length) return;
 
-    window.addEventListener('resize', removeAllActiveFaq)
-    window.addEventListener('resize', activateFirstLgItem)
+    window.addEventListener('resize', removeAllActiveFaqResize)
+    window.addEventListener('resize', activateFirstLgItemResize)
 
     activateFirstLgItem();
 
@@ -164,9 +180,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function activateFirstLgItem() {
-        let currentWindowWidth = window.innerWidth;
 
-        if (currentWindowWidth >= separatop) {
+        if (innerWidth2 >= separatop) {
             let first = btns[0],
                 attr = first.dataset.faq,
                 activeAnswer = document.querySelector('[data-answer-lg=' + attr + ']');
@@ -186,6 +201,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // onresize with safari start
+    function activateFirstLgItemResize() {
+        if (innerWidth2 !== window.innerWidth) {
+            innerWidth2 = window.innerWidth;
+            activateFirstLgItem();
+        }
+    }
+
+    function removeAllActiveFaqResize() {
+        if (innerWidth !== window.innerWidth) {
+            innerWidth = window.innerWidth;
+            removeAllActiveFaq();
+        }
+    }
+
+    // onresize with safari end
+
     function removeAllActiveFaqExceptThis(el) {
         for (let i = 0; i < btns.length; i++) {
             if (btns[i].classList.contains('active') && el !== btns[i]) {
@@ -202,7 +234,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function removeSmAnswerVisibility(el) {
         el.nextElementSibling.style.maxHeight = 0;
-        ;
         el.nextElementSibling.classList.remove('show')
     }
 
