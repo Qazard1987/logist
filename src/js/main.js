@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener('scroll', showStickyHeader);
     window.addEventListener('resize', showStickyHeaderResize);
+
     showStickyHeader();
 
 
@@ -54,18 +55,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function showStickyHeader() {
-        if (window.pageYOffset > coord) {
+        if (window.pageYOffset >= coord) {
             stickyHeader.style.display = 'block';
-            if (!stickyHeader.classList.contains('fixed')) {
-                stickyHeader.classList.add('fixed')
-            }
-            addJsAnimation(stickyHeader);
+            stickyHeader.classList.add('animate__slideInDown');
         } else {
-            if (stickyHeader.classList.contains('fixed')) {
-                stickyHeader.classList.remove('fixed')
-            }
-            removeAnimation(stickyHeader);
             stickyHeader.style.display = 'none';
+            stickyHeader.classList.remove('animate__slideInDown');
         }
     }
 
@@ -76,22 +71,13 @@ document.addEventListener("DOMContentLoaded", function () {
             showStickyHeader();
         }
     }
-
-    function addJsAnimation(block) {
-        block.classList.remove('animate__slideOutUp');
-        block.classList.add('animate__slideInDown');
-    }
-
-    function removeAnimation(block) {
-        block.classList.remove('animate__slideInDown');
-        block.classList.add('animate__slideOutUp');
-    }
 });
 
 //Модальные окна
 document.addEventListener("DOMContentLoaded", function () {
     let triggers = document.querySelectorAll('.js-modal-trigger'),
-        body = document.querySelector('.body');
+        body = document.querySelector('.body'),
+        header = document.querySelector('.js-header');
 
     if (!triggers.length) return;
 
@@ -110,12 +96,13 @@ document.addEventListener("DOMContentLoaded", function () {
         if (modal) {
 
             body.style.overflowY = 'hidden';
-            body.style.paddingRight = scrollWidth + 'px'
+            body.style.paddingRight = scrollWidth + 'px';
+
+            if(header) header.style.paddingRight = scrollWidth + 'px';
             modal.style.display = 'flex';
             modal
                 .querySelector('.js-modal-window')
-                .classList.add('animate__animated', 'animate__fadeInUp')
-            let btnClose = modal.querySelector(`[data-close=${attr}]`);
+                .classList.add('animate__animated', 'animate__fadeInUp');
 
             modal.addEventListener('click', closeModal);
 
@@ -138,6 +125,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             body.style.overflowY = 'scroll';
             body.style.paddingRight = 0;
+
+            if(header) header.style.paddingRight = 0;
 
             layout.style.display = 'none';
             layout.classList.remove('n-scrollbar');

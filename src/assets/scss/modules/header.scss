@@ -1,19 +1,10 @@
 .header-w {
-  position: sticky;
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: -o-sticky;
-  position: -ms-sticky;
-
-  -webkit-transform: translateZ(1px);
-  -moz-transform: translateZ(1px);
-  -o-transform: translateZ(1px);
-  transform: translateZ(1px);
-  overscroll-behavior: contain;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
 
   z-index: 200;
-  top: 0;
-  padding-bottom: 1.4rem;
 
   &__wrapper {
     padding: 1rem;
@@ -39,11 +30,11 @@
       flex-grow: 0;
       flex-shrink: 0;
 
-      .fixed &:first-child {
+      .js-visibility &:first-child {
         order: 1;
       }
 
-      .fixed &:last-child {
+      .js-visibility &:last-child {
         order: 2;
       }
     }
@@ -62,7 +53,7 @@
     margin-right: auto;
 
     @media #{$desktopLG} {
-      .fixed & {
+      .js-visibility & {
         margin: 0;
       }
     }

@@ -2,7 +2,6 @@
 @import "./modules/header";
 @import "./modules/footer";
 
-
 .button-image {
   display: flex;
   align-items: center;
@@ -654,13 +653,6 @@
   background-image: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.74) 49.48%, rgba(255, 255, 255, 0) 100%);
 }
 
-.fixed{
-  position: fixed!important;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
 .router {
 
   &__wrapper {
@@ -841,7 +833,7 @@
   right: 0;
   bottom: 0;
 
-  background: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7)!important;
 
   overflow-y: auto;
 
@@ -851,7 +843,6 @@
   &__window {
     position: relative;
 
-    z-index: 9999;
     margin: auto;
     padding: 3rem;
 
@@ -860,7 +851,7 @@
     backdrop-filter: blur(20px);
 
     max-width: 619px;
-    min-width: 300px;
+    min-width: 280px;
     background: #fff;
 
     overflow: hidden;
@@ -1666,6 +1657,10 @@
   @media #{$desktopLG} {
     width: 32%;
   }
+}
+
+.block-clearfix{
+  padding-bottom: 6rem;
 }
 
 

@@ -10,6 +10,8 @@ block content
         .wrapper
             .wrapper__inner
                .page-block
+                   .block-clearfix
+               .page-block
                 .transportation
                     .transportation__wrapper
                         h2.block-title.block-title--mb Актуальные перевозки прямо сейчас
@@ -264,6 +266,20 @@ block content
                                                 img(src="../../assets/img/icons/b2b.png" height='100%')
 
 block modals
+    .modal(data-target="callback" style="display:none")
+        .modal__window.js-modal-window(style="background-image: url(\"../../assets/img/photos/light-modal-clouds.png\")")
+            button.modal__close(data-close="callback" title="Закрыть")
+                .modal__close-inner
+            .modal__header
+                h3.modal__title Заказать звонок
+            .modal__content
+                form#form-callback.user-form.modal__form(action="#", method="POST", data-url="callback")
+                    .user-form__section
+                        input.user-form__input(type="text" placeholder="Ваше имя" name="firstName")
+                    .user-form__section
+                        input.user-form__input(type="tel" placeholder="Телефон" name="phone_number")
+                    .user-form__section
+                        input.user-form__submit(type="submit" value="Войти")
     .modal(data-target="registration" style="display:none")
         .modal__window.js-modal-window(style="background-image: url(\"../../assets/img/photos/light-modal-clouds.png\")")
             button.modal__close(data-close="registration" title="Закрыть")
@@ -288,20 +304,6 @@ block modals
                         input.user-form__input(type="text" placeholder="Логин" name="username")
                     .user-form__section
                         input.user-form__input(type="password" placeholder="Пароль" name="user_password")
-                    .user-form__section
-                        input.user-form__submit(type="submit" value="Войти")
-    .modal(data-target="callback" style="display:none")
-        .modal__window.js-modal-window(style="background-image: url(\"../../assets/img/photos/light-modal-clouds.png\")")
-            button.modal__close(data-close="callback" title="Закрыть")
-                .modal__close-inner
-            .modal__header
-                h3.modal__title Заказать звонок
-            .modal__content
-                form#form-callback.user-form.modal__form(action="#", method="POST", data-url="callback")
-                    .user-form__section
-                        input.user-form__input(type="text" placeholder="Ваше имя" name="firstName")
-                    .user-form__section
-                        input.user-form__input(type="tel" placeholder="Телефон" name="phone_number")
                     .user-form__section
                         input.user-form__submit(type="submit" value="Войти")
 
