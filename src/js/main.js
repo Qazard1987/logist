@@ -254,26 +254,3 @@ document.addEventListener("DOMContentLoaded", function () {
         lgAnswer.removeAttribute('hidden');
     }
 });
-
-//Высота iframe видео модалки
-document.addEventListener('DOMContentLoaded', function () {
-    let modalBtns = document.querySelectorAll('.js-modal-btn');
-
-    if (!modalBtns.length) return;
-
-    for (let i = 0; i < modalBtns.length; i++) {
-        modalBtns[i].addEventListener('click', calcModalHeight);
-    }
-
-    window.addEventListener('resize', calcModalHeight);
-
-    function calcModalHeight() {
-        let wrapper = document.querySelector('.modal-video-inner');
-        if (!wrapper) return;
-        frame = wrapper.querySelector('iframe'),
-            height = wrapper.clientWidth / 2;
-
-
-        frame.style.height = height + 'px'
-    }
-})
