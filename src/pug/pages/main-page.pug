@@ -175,43 +175,4 @@ block content
 block script
 
 block modals
-    .modal(data-target="auth" style="display:none")
-        .modal__window.js-modal-window(style="background-image: url(\"../../assets/img/photos/light-modal-clouds.png\")")
-            button.modal__close(data-close="auth" title="Закрыть")
-                .modal__close-inner
-            .modal__header
-                h3.modal__title Личный кабинет
-            .modal__content
-                form#form-auth.user-form.modal__form(action="#", method="POST", data-url="auth")
-                    .user-form__section
-                        input.user-form__input(type="text" placeholder="Логин" name="username")
-                    .user-form__section
-                        input.user-form__input(type="password" placeholder="Пароль" name="user_password")
-                    .user-form__section
-                        input.user-form__submit(type="submit" value="Войти")
-    .modal(data-target="registration" style="display: none")
-        .modal__window.js-modal-window(style="background-image: url(\"../../assets/img/photos/light-modal-clouds.png\")")
-            button.modal__close(data-close="registration" title="Закрыть")
-                .modal__close-inner
-            .modal__header
-                h3.modal__title Регистрация
-            .modal__content
-                form#form-register.user-form.modal__form(action="#" method="POST" data-url="register")
-                    .user-form__section
-                        input.user-form__input(type="tel" placeholder="Ваш телефон" name="phoneNumber")
-                    .user-form__section
-                        input.user-form__submit(type="submit" value="Зарегистрироваться")
-    .modal(data-target="callback" style="display:none")
-        .modal__window.js-modal-window(style="background-image: url(\"../../assets/img/photos/light-modal-clouds.png\")")
-            button.modal__close(data-close="callback" title="Закрыть")
-                .modal__close-inner
-            .modal__header
-                h3.modal__title Заказать звонок
-            .modal__content
-                form#form-callback.user-form.modal__form(action="#", method="POST", data-url="callback")
-                    .user-form__section
-                        input.user-form__input(type="text" placeholder="Ваше имя" name="firstName")
-                    .user-form__section
-                        input.user-form__input(type="tel" placeholder="Телефон" name="phone_number")
-                    .user-form__section
-                        input.user-form__submit(type="submit" value="Войти")
+    include ../includes/modules/modals

@@ -381,8 +381,8 @@
       }
     }
 
-    &--partner{
-      width: fit-content!important;
+    &--partner {
+      width: fit-content !important;
     }
   }
 
@@ -833,8 +833,6 @@
   right: 0;
   bottom: 0;
 
-  background-color: rgba(0, 0, 0, 0.7)!important;
-
   overflow-y: auto;
 
   display: flex;
@@ -848,7 +846,6 @@
 
     width: 100%;
     border-radius: 2rem;
-    backdrop-filter: blur(20px);
 
     max-width: 619px;
     min-width: 280px;
@@ -867,6 +864,10 @@
 
     @media #{$tablet} {
       padding: 10rem;
+    }
+
+    &--lg {
+      max-width: 900px;
     }
   }
 
@@ -939,6 +940,199 @@
 
       margin: 0 0 5rem 0;
     }
+
+    &--mb {
+      @media #{$tablet} {
+        margin: 0 0 2.4rem 0;
+      }
+    }
+  }
+
+  &__sub-title {
+    font-family: $regularFont;
+    font-size: 1.6rem;
+    line-height: 115%;
+    margin-bottom: 1.3rem;
+
+    color: $mainFontColor;
+
+    @media #{$tablet} {
+      font-size: 2rem;
+    }
+
+    @media #{$tabletH} {
+      font-family: $lightFont;
+      font-size: 2.4rem;
+    }
+  }
+
+  &__content-block {
+    margin-bottom: 1.6rem;
+
+    @media #{$tabletH} {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  ul {
+    margin-bottom: 1.1rem;
+
+    @media #{$tabletH} {
+      margin-bottom: 1.4rem;
+    }
+
+    li {
+      font-size: 1.4rem;
+      line-height: 150%;
+
+      padding-left: 1.2rem;
+      margin-bottom: .7rem;
+
+      @media #{$tabletH} {
+        margin-bottom: .9rem;
+      }
+
+
+      @media #{$tabletH} {
+        font-size: 1.8rem;
+      }
+
+      &::marker {
+        display: inline-block;
+        font-family: FontAwesome;
+        content: "\f111";
+        font-size: 0.7rem;
+        line-height: 150%;
+
+        margin: 0.5rem 1.2rem 0 0;
+
+        @media #{$tabletH} {
+          margin: 0.8rem 1.2rem 0 0;
+        }
+      }
+    }
+  }
+
+  ol {
+    counter-reset: tidbit-counter 0;
+
+    li::before {
+      counter-increment: tidbit-counter; /* увеличиваем значение счетчика */
+      content: counter(tidbit-counter) ". ";
+      margin-right: .5rem;
+    }
+
+    li::marker {
+      content: "";
+    }
+
+    li {
+      display: flex;
+      align-items: flex-start;
+
+      font-size: 1.4rem;
+      line-height: 150%;
+
+      padding-left: 1.2rem;
+
+      margin-bottom: .7rem;
+
+      @media #{$tabletH} {
+        margin-bottom: .9rem;
+      }
+
+
+      @media #{$tabletH} {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 1.1rem;
+
+    @media #{$tabletH} {
+      margin-bottom: 1.4rem;
+    }
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      font-size: 1.4rem;
+      line-height: 150%;
+
+      padding-left: 1.2rem;
+
+      &:not(:last-child) {
+        margin-bottom: .7rem;
+
+        @media #{$tabletH} {
+          margin-bottom: .9rem;
+        }
+      }
+
+      @media #{$tabletH} {
+        font-size: 1.8rem;
+      }
+
+      &::before {
+        display: inline-block;
+        font-family: FontAwesome;
+        content: "\f111";
+        font-size: 0.7rem;
+        line-height: 150%;
+
+        margin: 0.5rem 1.2rem 0 0;
+
+        @media #{$tabletH} {
+          margin: 0.8rem 1.2rem 0 0;
+        }
+      }
+
+      &::marker {
+        content: none;
+      }
+    }
+  }
+
+  p {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 150%;
+
+    &:not(:last-child) {
+      margin-bottom: .7rem;
+
+      @media #{$tabletH} {
+        margin-bottom: .9rem;
+      }
+    }
+
+    @media #{$tabletH} {
+      font-size: 1.8rem;
+    }
+  }
+
+  a {
+    display: inline-block;
+    color: $activator;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &::before {
+    display: block;
+
+    content: '';
+    background-color: rgba(0, 0, 0, 0.7) !important;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -1659,7 +1853,7 @@
   }
 }
 
-.block-clearfix{
+.block-clearfix {
   padding-bottom: 6rem;
 }
 
