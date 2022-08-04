@@ -1028,7 +1028,7 @@
         margin: 0.6rem 1.2rem 0 0;
 
         @media #{$tabletH} {
-          margin: 0.8rem 1.2rem 0 0;
+          margin: 1rem 1.2rem 0 0;
         }
       }
     }
@@ -1038,6 +1038,7 @@
     counter-reset: tidbit-counter 0;
 
     li::before {
+      font-family: $regularFont;
       counter-increment: tidbit-counter; /* увеличиваем значение счетчика */
       content: counter(tidbit-counter) ". ";
       margin-right: .5rem;
