@@ -974,6 +974,27 @@
     }
   }
 
+  &__type-li{
+    &::before{
+      content: ""!important;
+    }
+  }
+
+  &__type{
+    display: flex!important;
+    &::before {
+      font-family: FontAwesome;
+      content: "\f111";
+      font-size: 0.7rem;
+      line-height: 130%;
+      margin: 0.6rem 1.2rem 0 0;
+
+      @media #{$tabletH} {
+        margin: 0.8rem 1.2rem 0 0;
+      }
+    }
+  }
+
   ul {
     margin-bottom: 1.1rem;
 
@@ -982,6 +1003,8 @@
     }
 
     li {
+      display: flex;
+      align-items: flex-start;
       font-size: 1.4rem;
       line-height: 150%;
 
@@ -997,14 +1020,12 @@
         font-size: 1.8rem;
       }
 
-      &::marker {
-        display: inline-block;
+      &::before {
         font-family: FontAwesome;
         content: "\f111";
         font-size: 0.7rem;
-        line-height: 150%;
-
-        margin: 0.5rem 1.2rem 0 0;
+        line-height: 130%;
+        margin: 0.6rem 1.2rem 0 0;
 
         @media #{$tabletH} {
           margin: 0.8rem 1.2rem 0 0;
@@ -1020,6 +1041,17 @@
       counter-increment: tidbit-counter; /* увеличиваем значение счетчика */
       content: counter(tidbit-counter) ". ";
       margin-right: .5rem;
+      margin-top: 0!important;
+
+      font-size: 1.4rem;
+      line-height: 150%;
+
+      padding-left: 1.2rem;
+
+
+      @media #{$tabletH} {
+        font-size: 1.8rem;
+      }
     }
 
     li::marker {
