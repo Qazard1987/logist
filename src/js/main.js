@@ -98,19 +98,17 @@ document.addEventListener("DOMContentLoaded", function () {
             body.style.overflowY = 'hidden';
             body.style.paddingRight = scrollWidth + 'px';
 
-            if(header) header.style.paddingRight = scrollWidth + 'px';
+            if (header) header.style.paddingRight = scrollWidth + 'px';
             modal.style.display = 'flex';
             modal
                 .querySelector('.js-modal-window')
                 .classList.add('animate__animated', 'animate__fadeInUp');
 
             modal.addEventListener('click', closeModal);
+            window.addEventListener('resize', calcBeforeBgWrapperWidth.bind(null, modal))
 
-            let innerHeight = modal.querySelector('.js-modal-window').clientHeight;
 
-            if (innerHeight + 40 < document.documentElement.clientHeight) {
-                modal.classList.add('n-scrollbar');
-            }
+            calcBeforeBgWrapperWidth(modal);
         }
     }
 
@@ -118,21 +116,41 @@ document.addEventListener("DOMContentLoaded", function () {
         let target = event.target,
             button = target.closest('[data-close]'),
             layout = target.closest('.modal'),
-            window = target.closest('.js-modal-window');
+            windowM = target.closest('.js-modal-window');
 
-        if (button || layout && !window) {
+        if (button || layout && !windowM) {
             let body = document.querySelector('.body');
 
             body.style.overflowY = 'scroll';
             body.style.paddingRight = 0;
 
-            if(header) header.style.paddingRight = 0;
+            window.removeEventListener('resize', calcBeforeBgWrapperWidth.bind(null, layout))
+
+            if (header) header.style.paddingRight = 0;
 
             layout.style.display = 'none';
             layout.classList.remove('n-scrollbar');
 
             layout.querySelector('.js-modal-window')
                 .classList.remove('animate__animated', 'animate__fadeInUp', 'n-scrollbar');
+        }
+    }
+
+    function calcBeforeBgWrapperWidth(modal) {
+        let bgOverlay = modal.querySelector('.js-overlay');
+        calcInnerWindowHeight(modal);
+        bgOverlay.style.width = modal.clientWidth + 'px';
+    }
+
+    function calcInnerWindowHeight(modal) {
+        let innerHeight = modal.querySelector('.js-modal-window').clientHeight;
+
+        if (innerHeight + 40 < document.documentElement.clientHeight && !modal.classList.contains('n-scrollbar')) {
+            modal.classList.add('n-scrollbar');
+        }
+
+        if (innerHeight + 40 >= document.documentElement.clientHeight && modal.classList.contains('n-scrollbar')) {
+            modal.classList.remove('n-scrollbar');
         }
     }
 

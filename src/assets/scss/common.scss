@@ -838,6 +838,15 @@
   display: flex;
   padding: 2rem;
 
+  &__overlay {
+
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+
   &__window {
     position: relative;
 
@@ -974,14 +983,15 @@
     }
   }
 
-  &__type-li{
-    &::before{
-      content: ""!important;
+  &__type-li {
+    &::before {
+      content: "" !important;
     }
   }
 
-  &__type{
-    display: flex!important;
+  &__type {
+    display: flex !important;
+
     &::before {
       font-family: FontAwesome;
       content: "\f111";
@@ -1042,7 +1052,7 @@
       counter-increment: tidbit-counter; /* увеличиваем значение счетчика */
       content: counter(tidbit-counter) ". ";
       margin-right: .5rem;
-      margin-top: 0!important;
+      margin-top: 0 !important;
 
       font-size: 1.4rem;
       line-height: 150%;
@@ -1153,19 +1163,6 @@
     &:hover {
       text-decoration: underline;
     }
-  }
-
-  &::before {
-    display: block;
-
-    content: '';
-    background-color: rgba(0, 0, 0, 0.7) !important;
-
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
   }
 }
 
@@ -1889,6 +1886,3 @@
 .block-clearfix {
   padding-bottom: 6rem;
 }
-
-
-

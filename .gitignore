@@ -4,9 +4,6 @@
 # Node
 node_modules
 
-#production
-public
-
 # Dist & test
 test
 dist

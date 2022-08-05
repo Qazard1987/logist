@@ -4,9 +4,6 @@ import './js/'
 //Swiper styles
 import 'swiper/swiper-bundle.css';
 
-//Bootstrap grid
-import "bootstrap/dist/css/bootstrap-grid.css"
-
 //Our styles
 import "./assets/scss/common.scss"
 
